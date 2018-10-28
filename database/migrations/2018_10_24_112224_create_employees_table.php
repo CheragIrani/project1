@@ -15,7 +15,7 @@ class CreateEmployeesTable extends Migration
     {
         Schema::create('employees', function (Blueprint $table) {
             $table->increments('id');
-            $table->foreign('user_id')->references('id')->on('companies');
+            $table->foreign('company_id')->references('id')->on('companies');
             $table->timestamps();
             $table->string('first name');
             $table->string('last name');
